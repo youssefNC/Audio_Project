@@ -1,0 +1,603 @@
+/* Start Variables */
+:root {
+    --main-color: #ff5800;
+    --white-color: #fff;
+    --black-color: #111111;
+    --gray-color: #f6f6f6;
+}
+/* End Variables */
+/* Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Barlow', sans-serif;
+    background-color: var(--gray-color);
+}
+img {
+    width: 100%;
+    height: 100%;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Rules */
+/* Start New Products */
+.new-products {
+    background-color: var(--gray-color);
+    padding: 60px 0 100px;
+}
+.new-products .np-heading {
+    display: flex;
+    flex-direction: column;
+} 
+.new-products .np-heading h2 {
+    flex-basis: 100%;
+    font-size: 30px;
+} 
+.new-products .np-heading .arrows {
+    flex-basis: 100%;
+    align-self: flex-end;
+    display: flex;
+    background-color: transparent;
+}
+.new-products .np-heading .arrows > button {
+    background-color: black;
+    width: 30px;
+    height: 30px;
+    display: block;
+    border: none;
+    margin: 10px 0 -30px 3px;
+    cursor: pointer;
+}
+.new-products .np-heading .arrows > button > div {
+    width: 50%;
+    height: 50%;
+    border-right: 3px solid white;
+    border-bottom: 3px solid white;
+}
+.new-products .np-heading .arrows .arrow-r div {
+    transform: rotate(-45deg);
+    margin-left: 5px;
+}
+.new-products .np-heading .arrows .arrow-l div {
+    transform: rotate(135deg);
+    margin-left: 10px;
+}
+.new-products .np-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.new-products .np-content > div {
+    flex-basis: 20%;
+    background-color: white;
+    position: relative;
+    margin-top: 30px;
+}
+.new-products .np-content .card .image {
+    width: 240px;
+}
+.new-products .np-content .card .text {
+    margin: 0 0 20px 20px;
+}
+.new-products .np-content .card .text h3 {
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+.new-products .np-content .card .text p {
+    color: var(--main-color);
+    font-weight: bold;
+}
+.new-products .np-content .card .buy {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.507);
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    display: none;
+}
+.new-products .np-content .card:hover .buy {
+    display: flex;
+}
+.new-products .np-content .card .buy > div {
+    width: 70%;
+    margin: 3px auto;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    top: 50%;
+    cursor: pointer;
+}
+.new-products .np-content .card .buy .cart {
+    background-color: var(--main-color);
+}
+.new-products .np-content .card .buy .view {
+    background-color: white;
+    color: black !important;
+}
+.new-products .np-content .card .buy .compare {
+    background-color: black;
+}
+.new-products .np-content .card .buy-m {
+    background-color: var(--gray-color);
+    display: none;
+}
+.new-products .np-content .card .buy-m > div {
+    width: 100%;
+    margin: 3px auto;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    top: 50%;
+    cursor: pointer;
+}
+.new-products .np-content .card .buy-m .cart {
+    background-color: var(--main-color);
+    margin: 10px 0;
+}
+.new-products .np-content .card .buy-m .view {
+    background-color: white;
+    color: black !important;
+    border: 2px solid black;
+}
+@media (max-width:991px) {
+    .new-products .np-heading .arrows {
+        display: none;
+    }
+    .new-products .np-content > div {
+        flex-basis: 33%;
+    }
+}
+@media (max-width:767px) {
+    .new-products .np-content {
+        justify-content: space-evenly;
+    }
+    .new-products .np-content > div {
+        flex-basis: 34%;
+    }
+    .new-products .np-content .card:hover .buy {
+        display: none;
+    }
+    .new-products .np-content .card .buy-m {
+        display: block;
+    }
+}
+/* End New Products */
+/* Start Featured */
+.featured {
+    padding-bottom: 100px;
+}
+.featured .f-heading h2 {
+    font-size: 30px;
+    margin: -20px 0 10px;
+}
+.featured .f-content {
+    display: flex;
+}
+.featured .f-content .arrow-l {
+    margin-right: 70px;
+}
+.featured .f-content .arrow-r {
+    margin-left: 40px;
+}
+.featured .f-content .arrow-l,
+.featured .f-content .arrow-r {
+    display: flex;
+}
+.featured .f-content .arrow-l > button,
+.featured .f-content .arrow-r > button {
+    background-color: black;
+    width: 30px;
+    height: 30px;
+    display: block;
+    border: none;
+    margin: 10px 0 -30px 3px;
+    cursor: pointer;
+    align-self: center;
+}
+.featured .f-content .arrow-l > button > div {
+    transform: rotate(135deg);
+    margin-left: 10px;
+    width: 50%;
+    height: 50%;
+    border-right: 3px solid white;
+    border-bottom: 3px solid white;
+}
+.featured .f-content .arrow-r > button > div {
+    transform: rotate(-45deg);
+    margin-left: 5px;
+    width: 50%;
+    height: 50%;
+    border-right: 3px solid white;
+    border-bottom: 3px solid white;
+}
+.featured .f-content .image {
+    position: relative;
+}
+.featured .f-content .image::before {
+    position: absolute;
+    content: '';
+}
+.featured .f-content .image::after {
+    position: absolute;
+    content: '';
+    left: -8%;
+    top: 25%;
+    width: 100%;
+    height: 80%;
+    background: var(--main-color);
+    z-index: -1;
+}
+.featured .f-content .text {
+    align-self: center;
+    flex-basis: 36%;
+}
+.featured .f-content .text .price {
+    color: var(--main-color);
+    font-size: 25px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.featured .f-content .text h3 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+.featured .f-content .text .type {
+    margin-bottom: 10px;
+    color: var(--black-color);
+}
+.featured .f-content .text .description {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+.featured .f-content .text .buy {
+    display: flex;
+    justify-content: space-between;
+}
+.featured .f-content .text .buy > div {
+    flex-basis: 47%;
+    margin: 3px 0;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+.featured .f-content .text .buy .cart {
+    background-color: var(--main-color);
+}
+.featured .f-content .text .buy .view {
+    background-color: white;
+    color: black !important;
+    border: 2px solid black;
+}
+@media (max-width:991px) {
+    .featured .f-content {
+        flex-direction: column;
+    }
+    .featured .f-content .text h3 {
+        width: 60%;
+    }
+    .featured .f-content .arrow-l,
+    .featured .f-content .arrow-r {
+    display: none;
+    }
+    .featured .f-content .image {
+        margin: 50px auto 60px;
+        width: 328px;
+    }
+    .featured .f-content .image::after {
+        left: 3%;
+        top: -5%;
+    }
+}
+@media (max-width: 767px) {
+    .featured .f-content .text h3 {
+        width: 85%;
+    }
+}
+/* End Featured */
+/* Start Offers */
+.offers {
+    padding-bottom: 100px;
+}
+.offers .o-heading h2 {
+    font-size: 30px;
+    margin: 0 0 30px;
+}
+.offers .container .o-content {
+    display: flex;
+    justify-content: space-between;
+}
+.offers .container .o-content > div {
+    flex-basis: 48%;
+}
+.offers .container .leftside {
+    background-color: rgb(20, 20, 20);
+    display: flex;
+    padding: 100px 0 50px;
+}
+.offers .container .leftside .content {
+    width: 100%;
+    padding: 35px 0;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.offers .container .leftside .content > div {
+    flex-basis: 50%;
+}
+.offers .container .leftside .content .discount h3 {
+    margin: 0 auto 15px;
+    width: fit-content;
+    background-color: var(--main-color) !important;
+    font-size: 35px;
+}
+.offers .container .leftside .content .discount p {
+    text-transform: uppercase;
+    width: 50%;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0 auto;
+}
+.offers .container .leftside .content .promocode h3 {
+    text-transform: uppercase;
+    font-size: 30px;
+    margin: 0 auto 10px;
+}
+.offers .container .leftside .content .promocode p {
+    text-transform: uppercase;
+    background-color: var(--main-color);
+    transform: skewX(-14deg);
+    text-align: center;
+    font-weight: bold;
+    padding: 5px 50px;
+    width: fit-content;
+}
+.offers .container .rightside .card {
+    background-color: white;
+    display: flex;
+    flex-basis: 50%;
+    padding: 10px 0;
+}
+.offers .container .rightside .card:nth-child(1) {
+    margin-bottom: 15px;
+}
+.offers .container .rightside .card .image {
+    position: relative;
+}
+.offers .container .rightside .card .image span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: white;
+    background-color: var(--main-color);
+    padding: 5px 10px;
+}
+.offers .container .rightside .card .name {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 25px;
+}
+.offers .container .rightside .card .type {
+    color: #777;
+}
+.offers .container .rightside .card .price {
+    color: var(--main-color);
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.offers .container .rightside .card .price span {
+    display: inline-block;
+    color: #777;
+    font-weight: normal;
+    height: 70%;
+    margin-bottom: 0px;
+    font-size: 14px;
+    position: relative;
+    top: -10px;
+    left: 5px;
+}
+.offers .container .rightside .card .description {
+    color: #777;
+    margin-bottom: 20px;
+}
+.offers .container .rightside .card .buy {
+    display: flex;
+    justify-content: space-between;
+}
+.offers .container .rightside .card .buy > div {
+    flex-basis: 47%;
+    margin: 3px 0;
+    color: white;
+    padding: 7px;
+    text-align: center;
+    cursor: pointer;
+}
+.offers .container .rightside .card .buy .cart {
+    background-color: var(--main-color);
+}
+.offers .container .rightside .card .buy .view {
+    background-color: white;
+    color: black !important;
+    border: 2px solid black;
+}
+@media (max-width:991px) {
+    .offers .container .o-content {
+        flex-direction: column;
+    }
+    .offers .container .leftside{
+        margin-bottom: 40px;
+    }
+    .offers .container .rightside .card .image {
+        margin-right: 30px;
+    }
+    .offers .container .rightside .card .text {
+        flex-basis: 72%;
+        display: flex;
+        flex-direction: column;
+    }
+    .offers .container .rightside .card .text .price {
+        order: -1;
+    }
+    .offers .container .rightside .card .text .buy {
+        margin: 10px 0;
+    }
+    .offers .container .rightside .card .text .name {
+        font-size: 20px;
+    }
+    .offers .container .leftside {
+        padding-top: 70px;
+    }
+    .offers .container .leftside .content .promocode h3 {
+        font-size: 27px;
+    }
+    .offers .container .leftside .content .discount p {
+        width: 82%;
+    }
+}
+@media (max-width:767px) {
+    .offers .container .rightside .card {
+        padding: 30px 0;
+    }
+    .offers .container .rightside .card .description {
+        display: none;
+    }
+    .offers .container .rightside .card > div {
+        flex-basis: 50%;
+    }
+    .offers .container .rightside .card .buy .cart {
+        display: none;
+    }
+    .offers .container .rightside .card .buy .view {
+        border: none;
+        color: white !important;
+        background-color: var(--main-color);
+        flex-basis: 100%;
+    }
+}
+/* End Offers */
+/* Start Suggestions */
+.suggest {
+    padding-bottom: 100px;
+}
+.suggest .s-heading {
+    display: flex;
+    flex-direction: column;
+} 
+.suggest .s-heading h2 {
+    flex-basis: 100%;
+    font-size: 30px;
+} 
+.suggest .s-heading .arrows {
+    flex-basis: 100%;
+    align-self: flex-end;
+    display: flex;
+    background-color: transparent;
+}
+.suggest .s-heading .arrows > button {
+    background-color: black;
+    width: 30px;
+    height: 30px;
+    display: block;
+    border: none;
+    margin: 10px 0 0 3px;
+    cursor: pointer;
+}
+.suggest .s-heading .arrows > button > div {
+    width: 50%;
+    height: 50%;
+    border-right: 3px solid white;
+    border-bottom: 3px solid white;
+}
+.suggest .s-heading .arrows .arrow-r div {
+    transform: rotate(-45deg);
+    margin-left: 5px;
+}
+.suggest .s-heading .arrows .arrow-l div {
+    transform: rotate(135deg);
+    margin-left: 10px;
+}
+.suggest .s-content {
+    display: flex;
+    justify-content: space-between;
+}
+.suggest .s-content .card {
+    flex-basis: 15%;
+    padding: 10px;
+    background-color: white;
+    font-size: 13px;
+    font-weight: bold;
+}
+.suggest .s-content .card .image {
+    width: 100px;
+    margin: 0 auto;
+}
+.suggest .s-content .card .text {
+    margin-top: 15px;
+}
+.suggest .s-content .card .text .name {
+    margin-bottom: 5px;
+}
+.suggest .s-content .card .text .price {
+    color: var(--main-color);
+}
+@media (max-width:767px) {
+    .suggest .s-heading .arrows,
+    .suggest .s-content .card:nth-child(4),
+    .suggest .s-content .card:nth-child(5),
+    .suggest .s-content .card:nth-child(6) {
+        display: none;
+    }
+    .suggest .s-heading {
+        margin-bottom: 20px;
+    }
+    .suggest .s-content .card .image {
+        width: 150px;
+    }
+    .suggest .s-content .card .text .name {
+        margin-bottom: 10px;
+    }
+    .suggest .s-content {
+        flex-direction: column;
+    }
+    .suggest .s-content .card {
+        width: 300px;
+        margin: 10px auto;
+        font-size: 19px;
+        padding: 15px;
+    }
+}
+/* End Suggestions */
