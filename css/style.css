@@ -209,6 +209,10 @@ img {
         display: block;
     }
 }
+@media (max-width: 575.98px)
+.new-products .np-content > div {
+    flex-basis: 100%;
+}
 /* End New Products */
 /* Start Featured */
 .featured {
